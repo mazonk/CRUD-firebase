@@ -1,5 +1,5 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCFv1u12-I9AGfI5yHbtsdVMXahR3c_wng",
+    apiKey: import.meta.env.apiKey,
     authDomain: "crud-cda59.firebaseapp.com",
     databaseURL: "https://crud-cda59-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "crud-cda59",
@@ -45,15 +45,15 @@ function setupEventHandlers() {
         reviews.appendChild(li);
     })
 
-    // reviewsRef.on("child_changed", data => {
+    //  reviewsRef.on("child_changed", data => {
     //     var reviewNode = document.getElementById(data.key);
-    //     reviewNode.innerHTML = reviewTemplate(data.val());
-    // });
+    //      reviewNode.innerHTML = reviewTemplate(data.val());
+    //  });
 
-    // reviewsRef.on("child_removed", data => {
-    //     var reviewNode = document.getElementById(data.key);
-    //     reviewNode.parentNode.removeChild(reviewNode);
-    // });
+    //  reviewsRef.on("child_removed", data => {
+    //      var reviewNode = document.getElementById(data.key);
+    //      reviewNode.parentNode.removeChild(reviewNode);
+    //  });
 }
 
 //CRUD operations
