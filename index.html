@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Firebase realtime database CRUD example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+
+<body>  
+
+  <div class='container'>
+    <div class='header'>
+      <img src="logo.png" width="100%" alt="">
+      <h4>Real-Time Database CRUD example</h4>
+    </div>
+    <br />
+    <form id='reviewForm'>
+      <input type="hidden" id='hiddenId' />     
+      <div class="input-field">
+        <label for="fullName">Full Name</label>
+        <input type="text" id='fullName' />
+      </div>
+      <br />
+      <div class="input-field">
+        <label for="message">Review Contents</label>
+        <textarea class="materialize-textarea" id='message'></textarea>
+      </div>
+      <div class="input-field">
+        <label for="tags">Tags</label>
+        <input type="text" id='tags' />
+      </div>
+      <br />
+      <br />
+      <button class="waves-effect waves-light btn" type='submit'>Add / Update review</button>
+    </form>
+    <br /><br /><br />
+    <ul id='reviews'></ul>
+  </div>
+
+  <!-- JavaScript imports -->
+  <script type="module"src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js"></script>  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
